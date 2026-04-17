@@ -6,7 +6,10 @@ import { ArrowUpRight } from "lucide-react";
 export function AboutCard() {
   return (
     <div className="bento-card bento-card--wide" id="about">
-      <div className="bento-card__content" style={{ justifyContent: "space-between" }}>
+      <div
+        className="bento-card__content"
+        style={{ justifyContent: "space-between" }}
+      >
         <div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -95,7 +98,10 @@ export function AboutCard() {
 
 export function SkillsCard() {
   return (
-    <div className="bento-card bento-card--small" style={{ background: "var(--color-surface)" }}>
+    <div
+      className="bento-card bento-card--small"
+      style={{ background: "var(--color-surface)" }}
+    >
       <div
         className="bento-card__content"
         style={{ alignItems: "center", justifyContent: "center" }}

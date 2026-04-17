@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
+import avatarImage from "../../assets/20260317_215508.jpg";
 
 export function AvatarCard() {
   return (
@@ -15,20 +17,29 @@ export function AvatarCard() {
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
+          transition={{
+            duration: 0.7,
+            delay: 0.4,
+            ease: [0.34, 1.56, 0.64, 1],
+          }}
           style={{
-            width: 100,
-            height: 100,
+            width: 124,
+            height: 124,
             borderRadius: "50%",
             background: "rgba(255,255,255,0.3)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 56,
+            position: "relative",
+            overflow: "hidden",
             backdropFilter: "blur(10px)",
           }}
         >
-          🧑‍💻
+          <Image
+            src={avatarImage}
+            alt="Avatar"
+            fill
+            sizes="124px"
+            style={{ objectFit: "cover", objectPosition: "50% 28%" }}
+            priority
+          />
         </motion.div>
 
         {/* Decorative underscore */}
